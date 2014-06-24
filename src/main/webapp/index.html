@@ -2,13 +2,135 @@
 
 <html ng-app="geektic">
     <head>
+    <script src="/js/angular.js"></script>
+        <script src="/js/angular-route.js"></script>
+        <script src="/js/app.js"></script>
+        
+         <link rel="stylesheet" href="checkbox.css" />
+         <link rel="stylesheet" href="/font-awesome-4.1.0/css/font-awesome.css" />
+         
+         <style>
+		h1{
+			text-align: center;
+		}
+		#modalCheck{
+			display: none;
+		}
+		.modalLayer{
+			display: none;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#modalCheck:checked + .modalLayer, #modalContent:target{
+			display: block;
+		}
+		.popup_block{
+			background: #fff;
+			padding: 20px;
+			border: 20px solid #ddd;
+			position: relative;
+			margin: 10% auto;
+			width: 40%;
+			box-shadow: 0px 0px 20px #000;
+			border-radius: 10px;
+		}
+		img.btn_close {
+			float: right;
+			margin: -55px -55px 0 0;
+			cursor: pointer;
+		}
+		.button{
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	</style>
+	
+	
         <title>Geektic</title>
     </head>
     <body ng-controller="HelloCtrl">
-        <h1>{{ helloMessage.message }}</h1>
-
-        <script src="/js/angular.js"></script>
-        <script src="/js/angular-route.js"></script>
-        <script src="/js/app.js"></script>
+    
+    
+			
+   <div>
+   
+		<label class="button" for="modalCheck"><span class="fa-stack fa-lg "><i class="fa  fa-circle fa-stack-2x "></i><i class="fa  fa-search fa-stack-1x fa-inverse"></i></span> 
+		</label>
+		<input type="checkbox" id="modalCheck" />
+		<div class="modalLayer">
+			<div class="popup_block">
+				<label for="modalCheck"><img alt="Fermer" title="Fermer la fenêtre" class="btn_close" src="./close_pop.png"></label>
+				<h2>Selon vos centres d'interêts :</h2>
+	
+				
+				<div style="margin-bottom:12px;">
+				<input type="radio" id="femmeSelec" name="sexe" value="1"required/>
+				<label value="1" class="custombtn" for="femmeSelec">Femme</label>
+				</div>
+				
+				
+				<div style="margin-bottom:12px;"> 
+				<input type="radio" id="hommeSelec" name="sexe" value="2"required/>
+				<label value="2" class="custombtn" for="hommeSelec">Homme</label>
+				</div>
+				
+				<h4>Votre language de prédiliction ...</h4>
+				<select name="language">					
+				<option value="1">Java</option>
+				<option value="2">PHP</option>
+				<option value="3">HTML</option>
+				<option value="4">JavaScript</option>
+				<option value="3">C#</option>
+				</select>
+				
+				
+				</br>
+				
+				<h4>Votre compagnon de voyage serait ...</h4>
+				
+				<select name="CompVoyage">										
+				<option value="1">Batman</option>
+				<option value="2">Le blob</option>
+				<option value="3">Lassie</option>
+				<option value="4">Nemo</option>
+				<option value="3">Leatherface</option>
+				</select>
+		
+				
+				</br>
+				
+				<h4>Votre dernier repas serait ...</h4>
+				
+				<select name="repasPrefer">										
+				<option value="1">Un coq au vin</option>
+				<option value="2">Une grande frite</option>
+				<option value="3">Un kebab sans poivron</option>
+				<option value="4">Les nouilles d'Old Boy</option>
+				<option value="3">Un tartare bien cuit</option>
+				</select>
+				
+				
+				</br>
+				
+				<h4>Si vous devriez faire du sport ...</h4>
+				
+				<select name="sport">									
+				<option value="1">Zumba fever</option>
+				<option value="2">Wii, WiiU à la limite...</option>
+				<option value="3">(s)port 80 ?</option>
+				<option value="4">...</option>
+				</select>
+		
+				
+		
+			</div>
+		</div>
+	</div>
+	
+	
     </body>
 </html>
