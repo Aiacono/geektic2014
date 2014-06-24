@@ -32,10 +32,10 @@ public class GeekDao {
 	}   
 	
 	
-	public List<Geek> findBySexe(String chaine) {
+	public List<Geek> findGeekByInteret(String sexe, String lang, String compagnon, String repas, String sport) {
 		String jpql = "select s from Geek as s where s.sexe like :a";
 		TypedQuery<Geek> query = em.createQuery(jpql, Geek.class);
-		query.setParameter("a", chaine);
+		query.setParameter("a", sexe);
 		return query.getResultList();
 	}
 	

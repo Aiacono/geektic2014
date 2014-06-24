@@ -103,18 +103,18 @@
 	
 				
 				<div style="margin-bottom:12px;">
-				<input type="radio" id="femmeSelec" name="sexe" value="1"required/>
+				<input ng-model="criteres.sexe" type="radio" id="femmeSelec" name="sexe" value="1"required/>
 				<label value="1" class="custombtn" for="femmeSelec">Femme</label>
 				</div>
 				
 				
 				<div style="margin-bottom:12px;"> 
-				<input type="radio" id="hommeSelec" name="sexe" value="2"required/>
+				<input ng-model="criteres.sexe" type="radio" id="hommeSelec" name="sexe" value="2"required/>
 				<label value="2" class="custombtn" for="hommeSelec">Homme</label>
 				</div>
 				
 				<h4>Votre language de prédiliction ...</h4>
-				<select name="language">					
+				<select ng-model="criteres.language" name="language">					
 				<option value="1">Java</option>
 				<option value="2">PHP</option>
 				<option value="3">HTML</option>
@@ -127,7 +127,7 @@
 				
 				<h4>Votre compagnon de voyage serait ...</h4>
 				
-				<select name="CompVoyage">										
+				<select ng-model="criteres.CompVoyage" name="CompVoyage">										
 				<option value="1">Batman</option>
 				<option value="2">Le blob</option>
 				<option value="3">Lassie</option>
@@ -140,7 +140,7 @@
 				
 				<h4>Votre dernier repas serait ...</h4>
 				
-				<select name="repasPrefer">										
+				<select ng-model="criteres.repasPrefer" name="repasPrefer">										
 				<option value="1">Un coq au vin</option>
 				<option value="2">Une grande frite</option>
 				<option value="3">Un kebab sans poivron</option>
@@ -153,7 +153,7 @@
 				
 				<h4>Si vous devriez faire du sport ...</h4>
 				
-				<select name="sport">									
+				<select ng-model="criteres.sport" name="sport">									
 				<option value="1">Zumba fever</option>
 				<option value="2">Wii, WiiU à la limite...</option>
 				<option value="3">(s)port 80 ?</option>
@@ -161,7 +161,8 @@
 				</select>
 		
 				
-		
+			<input type="submit" ng-click="formSubmit();">
+			
 			</div>
 		</div>
 	</div>

@@ -10,7 +10,9 @@ import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.web.bind.annotation.RequestMapping; 
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController; 
+
 
 
 
@@ -29,18 +31,18 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 
 @RestController
 @Transactional
-@RequestMapping("/api/hello")
-public class HelloService {
+@RequestMapping("/api/recherche")
+public class rechercheGeek {
 	
 	
 	@Autowired 
 	protected GeekDao geek;
 	
     @RequestMapping(method = GET)
-    public List<Geek> sayHello() {
+    public List<Geek> sayHello(@RequestParam("sexe") String sexe) {
     	
     	List<Geek> listGeek = new ArrayList<Geek>(); 
-    	listGeek = geek.findAll();
+    	listGeek = geek.findGeekByInteret(sexe,"d","d","d","d");
 		return listGeek;
 		
     }
