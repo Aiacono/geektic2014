@@ -1,4 +1,4 @@
-package com.ninja_squad.geetik.beans;
+package com.ninja_squad.geektic.beans;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,15 +17,25 @@ import javax.persistence.Table;
 public class Geek {
 
 	@Id
+	@Column(name = "idGeek")
 	private String idGeek;
+	@Column(name = "nom")
 	private String nom;
+	@Column(name = "prenom")
 	private String prenom;
+	@Column(name = "age")
 	private String age;
+	@Column(name = "mail")
 	private String mail;
+	@Column(name = "sexe")
 	private String sexe;
+	@Column(name = "languagePref")
 	private String language;
+	@Column(name = "compagnonVoyage")
 	private String compagnon;
+	@Column(name = "repas")
 	private String repas;
+	@Column(name = "sport")
 	private String sport;
 	
 	
@@ -33,47 +43,47 @@ public class Geek {
 		return idGeek;
 	}
 	
-	@Column(name = "nom")
+	
 	public String getNom() {
 		return nom;
 	}
 
-	@Column(name = "prenom")
+	
 	public String getPrenom() {
 		return prenom;
 	}
 
-	@Column(name = "age")
+	
 	public String getAge() {
 		return age;
 	}
 
-	@Column(name = "mail")
+	
 	public String getMail() {
 		return mail;
 	}
 
-	@Column(name = "sexe")
+	
 	public String getSexe() {
 		return sexe;
 	}
 
-	@Column(name = "languagePref")
+	
 	public String getLanguage() {
 		return language;
 	}
 
-	@Column(name = "compagnonVoyage")
+	
 	public String getCompagnon() {
 		return compagnon;
 	}
 
-	@Column(name = "repas")
+	
 	public String getRepas() {
 		return repas;
 	}
 
-	@Column(name = "sport")
+	
 	public String getSport() {
 		return sport;
 	}
