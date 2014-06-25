@@ -39,10 +39,10 @@ public class rechercheGeek {
 	protected GeekDao geek;
 	
     @RequestMapping(method = GET)
-    public List<Geek> sayHello(@RequestParam("sexe") String sexe) {
+    public List<Geek> sayHello(@RequestParam("sexe") String sexe,@RequestParam("CompVoyage") int compVoy,@RequestParam("language") int lang,@RequestParam("repasPrefer") int repas,@RequestParam("sport") int sport) {
     	
     	List<Geek> listGeek = new ArrayList<Geek>(); 
-    	listGeek = geek.findGeekByInteret(sexe,"d","d","d","d");
+    	listGeek = geek.findGeekByInteret(sexe,compVoy,lang,repas,sport);
 		return listGeek;
 		
     }

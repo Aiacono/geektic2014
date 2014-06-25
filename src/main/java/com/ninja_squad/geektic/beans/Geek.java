@@ -30,13 +30,15 @@ public class Geek {
 	@Column(name = "sexe")
 	private String sexe;
 	@Column(name = "languagePref")
-	private String language;
+	private int language;
 	@Column(name = "compagnonVoyage")
-	private String compagnon;
+	private int compagnon;
 	@Column(name = "repas")
-	private String repas;
+	private int repas;
 	@Column(name = "sport")
-	private String sport;
+	private int sport;
+	
+	
 	
 	
 	public String getId() {
@@ -69,25 +71,24 @@ public class Geek {
 	}
 
 	
-	public String getLanguage() {
+	public int getLanguage() {
 		return language;
 	}
 
 	
-	public String getCompagnon() {
+	public int getCompagnon() {
 		return compagnon;
 	}
 
 	
-	public String getRepas() {
+	public int getRepas() {
 		return repas;
 	}
 
 	
-	public String getSport() {
+	public int getSport() {
 		return sport;
 	}
-
 	
 	
 	

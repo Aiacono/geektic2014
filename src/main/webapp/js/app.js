@@ -19,4 +19,9 @@ app.controller('HelloCtrl', function($scope, $http) {
             $scope.helloMessage = Geek;
         });
     };
+    
+    $http.get('/api/sport',{params:$scope.sport}).success(function(Geek) {
+        $scope.helloMessage = Geek;
+    });
+    
 });

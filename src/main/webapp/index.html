@@ -3,7 +3,7 @@
 <html ng-app="geektic">
     <head>
    <meta charset="UTF-8" />
-   
+   <link rel="icon" type="image/png" href="icone.jpg" />
    	<link rel="stylesheet" href="jquery.ui.accordion.css">
 	<script src="jquery-1.8.3.js"></script>
 	<script src="jquery.ui.core.js"></script>
@@ -74,9 +74,10 @@
 			
 		}
 		
-		.fa
+		.fa-child,.fa-gift,.fa-comments-o
 		{
 			color:orange;
+			margin-left:50px;
 		}
 	</style>
 	
@@ -153,7 +154,7 @@
 				
 				<h4>Si vous devriez faire du sport ...</h4>
 				
-				<select ng-model="criteres.sport" name="sport">									
+				<select ng-model="criteres.sport" name="sport" >									
 				<option value="1">Zumba fever</option>
 				<option value="2">Wii, WiiU à la limite...</option>
 				<option value="3">(s)port 80 ?</option>
@@ -166,16 +167,17 @@
 			</div>
 		</div>
 	</div>
-	
 	<h3>vos geeks : </h3>
 	<div style="width:100%;" >
 			<div class="CartesGeek" ng-repeat-start="geek in helloMessage" ng-click="geek.visible = !geek.visible">
-				<i class="fa fa-child"></i>
+				<i class="fa fa-child fa-2x"></i>
 				<span style="cursor:pointer"> {{ geek.nom }} {{ geek.prenom }}</span>
 			</div>
 			
 			<div class="CarteGeek" ng-repeat-end ng-click="geek.visible = !geek.visible" ng-show="geek.visible">
-				<i class="fa fa-gift"></i>{{ geek.age }} ans
+				<i class="fa fa-gift fa-2x"></i> {{ geek.age }} ans
+				<i class="fa fa-comments-o fa-2x"></i> {{ geek.mail }}
+				<i class="fa fa-comments-o fa-2x"></i> {{ geek.language }}
 			</div>
 	</div>
 	
