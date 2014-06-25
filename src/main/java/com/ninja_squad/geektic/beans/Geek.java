@@ -37,7 +37,8 @@ public class Geek {
 	private int repas;
 	@Column(name = "sport")
 	private int sport;
-	
+	@Column(name = "phraseFetiche")
+	private String phrase;
 	
 	
 	
@@ -90,6 +91,9 @@ public class Geek {
 		return sport;
 	}
 	
+	public String getPhrase() {
+		return phrase;
+	}
 	
 	
 	
